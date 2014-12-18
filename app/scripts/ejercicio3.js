@@ -1,0 +1,22 @@
+        $('#formulario').validate({
+            onkeyup: false,
+            onfocusout: false,
+            onclick: false,
+            rules: {
+                nombre: {
+                    required: true,
+                    minlength: 2,
+                    remote:'php/users.php'
+                },
+                email: {
+                    required:true,
+                    remote:'php/emails.php'
+                },
+                numcuenta: {
+                    required: true,
+                    iban: true,
+                    remote:'iban.js'
+                },
+                comentarios: 'required'
+            }
+        });

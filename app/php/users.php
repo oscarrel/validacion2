@@ -1,5 +1,5 @@
 <?php
-$request = trim(strtolower($_REQUEST['username']));
+$request = trim(strtolower($_REQUEST['nombre']));
 //sleep(2);
 usleep(150000);
 $users = array('asdf', 'Peter', 'Peter2', 'George');
