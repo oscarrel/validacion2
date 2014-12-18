@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>validacion2</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+</head>
+
+<body>
+    <form id="formulario" novalidate action="accion.php" method="post">
+        <div>
+            <label for="nombre">Nombre:
+                <span class="important">*</span>
+            </label>
+            <input type="text" id="nombre" name="nombre" />
+        </div>
+        <div>
+            <label for="email">E-mail:
+                <span class="important">*</span>
+            </label>
+            <input type="email" id="email" name="email" />
+        </div>
+        <div>
+            <label for="url">Url:</label>
+            <input type="url" id="url" name="url" />
+        </div>
+        <div>
+            <label for="cuentaiban"> Numero de Cuenta con IBAN:</label>
+            <input type="text" id="cuentaiban" name="cuentaiban" />
+        </div>
+        <div>
+            <label for="cuenta2"> Numero de Cuenta sin IBAN:</label>
+            <input type="text" id="cuenta2" name="cuenta2" />
+            <!-- IMPORTANTE, es necesartio el name=''-->
+        </div>
+        <div>
+            <label for="comentarios">Comentarios:</label>
+            <textarea id="comentarios" name="comentarios"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Enviar" />
+        </div>
+    </form>
+    
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-validate/dist/jquery.validate.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+
+    <!-- build:js({app,.tmp}) scripts/main4.js -->
+    <script src="scripts/ejercicio4.js"></script>
+    <script src="scripts/localization.js"></script>
+    <script src="scripts/iban.js"></script>
+    <script src="scripts/cuentabanco.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

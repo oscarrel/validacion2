@@ -1,16 +1,18 @@
-	/*numerodecuenta es el valor introducido por el usuario, y para el que se va a comprobar si es válido.
+/*value es el valor introducido por el usuario, y para el que se va a comprobar si es válido.
     Retornaremos true o false según corresponda */
 
-$.validator.addMethod("numcuenta", function(value, element) {
+/*El nombre que le doy al fichero js me da igual, aunque aqui es el mismo nombre que el metodo*/
+
+$.validator.addMethod("cuentabanco", function(value, element) {
 	// some quick simple tests to prevent needless work
 	if (this.optional(element)) {
 		return true;
 	}
     
-    var banco = numerodecuenta.substring(0,4);
-    var sucursal = numerodecuenta.substring(4,8);
-    var dc = numerodecuenta.substring(8,10);
-    var cuenta=numerodecuenta.substring(10,20);
+    var banco = value.substring(0,4);
+    var sucursal = value.substring(4,8);
+    var dc = value.substring(8,10);
+    var cuenta=value.substring(10,20);
     var CCC = banco+sucursal+dc+cuenta;
     var i;
     if (!/^[0-9]{20}$/.test(CCC)){
@@ -40,4 +42,4 @@ $.validator.addMethod("numcuenta", function(value, element) {
         }
         return true;
     }
-}, "Por favor, introduce el numero de cuenta correcta");
+}, "Por favor, introduce el numero de cuenta correcto");

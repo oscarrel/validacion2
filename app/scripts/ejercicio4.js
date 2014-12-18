@@ -12,9 +12,13 @@
                     required:true,
                     remote:'php/emails.php'
                 },
-                cuenta_iban: {
+                cuentaiban: {
                     required: true,
                     iban: true
+                },
+                cuenta2: {
+                    required: true,
+                    cuentabanco: true
                 },
                 comentarios: 'required'
             }
